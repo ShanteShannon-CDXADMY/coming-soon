@@ -23,7 +23,7 @@ body {
 /* Title */
 .coming-title {
   font-family: 'Cinzel', serif;
-  font-size: 5rem;
+  font-size: 7rem;
   color: #C9A23F; /* gold */
   letter-spacing: 0.15em;
   text-shadow: 0 0 10px rgba(0,0,0,0.7); /* readability */
@@ -32,7 +32,7 @@ body {
 
 /* Message */
 .coming-message {
-  font-size: 1.3rem;
+  font-size: 3rem;
   color: #FFFFFF;
   letter-spacing: 0.05em;
   line-height: 1.6;
@@ -43,7 +43,7 @@ body {
 /* Tagline */
 .tagline {
   font-family: 'Cinzel', serif;
-  font-size: 1rem;
+  font-size: 4rem;
   color: #C9A23F;
   text-transform: uppercase;
   margin-top: 15px;
