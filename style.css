@@ -50,6 +50,14 @@ body {
 
 /* Mobile adjustments */
 @media (max-width: 640px) {
+/* Mobile background fix */
+@media (max-width: 768px) {
+  body {
+    background-size: contain;   /* fits the whole logo */
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+}
 
   body {
     padding-top: 70px;
