@@ -3,7 +3,6 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 
-  /* Your logo as the background */
   background: url("logo1.png") no-repeat center center fixed;
   background-size: cover;
 
@@ -12,31 +11,45 @@ body {
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* text at the top */
+  justify-content: flex-start;
   align-items: center;
 
   min-height: 100vh;
-  padding-top: 60px; /* breathing room */
+  padding-top: 60px;
+
+  /* ⭐ Soft overlay so text doesn't clash with the logo */
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35); /* darkens background slightly */
+  z-index: 0;
+}
+
+h1, p {
+  position: relative;
+  z-index: 1; /* keeps text above overlay */
 }
 
 /* Title */
 .coming-title {
   font-family: 'Cinzel', serif;
-  font-size: 3rem;
+  font-size: 2.6rem; /* smaller for desktop */
   color: #C9A23F;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   text-shadow: 0 0 10px rgba(0,0,0,0.7);
   margin-bottom: 20px;
 }
 
 /* Message */
 .coming-message {
-  font-size: 1.3rem;
-  color: #FFFFFF;
-  letter-spacing: 0.05em;
+  font-size: 1.2rem;
   line-height: 1.6;
-  text-shadow: 0 0 8px rgba(0,0,0,0.6);
   max-width: 600px;
+  text-shadow: 0 0 8px rgba(0,0,0,0.6);
 }
 
 /* Tagline */
@@ -53,22 +66,23 @@ body {
 @media (max-width: 640px) {
 
   body {
-    padding-top: 90px; /* more space on phones */
+    padding-top: 70px;
   }
 
   .coming-title {
-    font-size: 4rem;      /* bigger headline */
-    letter-spacing: 0.20em;
+    font-size: 2.8rem; /* reduced from 4rem */
+    letter-spacing: 0.15em;
   }
 
   .coming-message {
-    font-size: 1.8rem;    /* bigger body text */
-    line-height: 1.9;
-    max-width: 90%;
+    font-size: 1.4rem; /* reduced from 1.8rem */
+    line-height: 1.7;
+    max-width: 85%;
   }
 
   .tagline {
-    font-size: 1.4rem;    /* bigger tagline */
-    letter-spacing: 0.14em;
+    font-size: 1.2rem; /* reduced */
+    letter-spacing: 0.12em;
   }
 }
+
