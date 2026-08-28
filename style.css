@@ -39,7 +39,7 @@ body {
 }
 
 .mobile-logo img {
-  width: 220px;
+  width: 200rem;
   height: auto;
   margin-top: 20px;
 }
@@ -99,6 +99,142 @@ body {
   }
 
   /* Same text sizes (you requested same rem) */
+  .coming-title {
+    font-size: 3rem;
+  }
+
+  .coming-message {
+    font-size: 1.4rem;
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+  }
+}
+/* ============================
+   FADE-IN ANIMATION
+   ============================ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ============================
+   GLOBAL STYLES
+   ============================ */
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+
+  /* Gradient background for all devices */
+  background: linear-gradient(
+    to bottom,
+    #0A1F44,   /* navy */
+    #000000    /* black */
+  );
+
+  color: #FFFFFF;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Hide mobile logo on desktop */
+.mobile-logo {
+  display: none;
+}
+
+.mobile-logo img {
+  width: 220px;
+  height: auto;
+  margin-top: 20px;
+}
+
+/* Center content vertically */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Coming Soon (gold, large, fade-in) */
+.coming-title {
+  font-family: 'Cinzel', serif;
+  font-size: 3rem;
+  color: #C9A23F;
+  letter-spacing: 0.12em;
+  text-shadow: 0 0 8px rgba(0,0,0,0.6);
+  margin-bottom: 20px;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+/* Message text (white, fade-in) */
+.coming-message {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  max-width: 600px;
+  text-shadow: 0 0 6px rgba(0,0,0,0.5);
+  animation: fadeIn 1.6s ease-out forwards;
+}
+
+/* Footer tagline (gold, fade-in) */
+.tagline {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  color: #C9A23F;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-shadow: 0 0 6px rgba(0,0,0,0.5);
+  animation: fadeIn 2s ease-out forwards;
+}
+
+
+/* ============================
+   DESKTOP BACKGROUND LOGO
+   ============================ */
+
+@media (min-width: 769px) {
+  body {
+    background-image: url("newLogo.PNG");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover; /* logo covers entire background */
+  }
+}
+
+
+/* ============================
+   MOBILE ADJUSTMENTS
+   ============================ */
+
+@media (max-width: 768px) {
+
+  /* Show mobile header logo */
+  .mobile-logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Remove desktop background image */
+  body {
+    background-image: none;
+  }
+
+  /* Same text sizes on mobile */
   .coming-title {
     font-size: 3rem;
   }
