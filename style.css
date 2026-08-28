@@ -1,0 +1,51 @@
+/* Full-page background logo */
+/* Full-page background logo */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+
+  /* Your logo as the background */
+  background: url("newLogo.PNG"); no-repeat center center fixed;
+  background-size: cover; /* fills the whole screen */
+
+  color: #FFFFFF; /* white text for contrast */
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* text at the top */
+  align-items: center;
+
+  min-height: 100vh;
+  padding-top: 60px; /* breathing room at the top */
+}
+
+/* Title */
+.coming-title {
+  font-family: 'Cinzel', serif;
+  font-size: 5rem;
+  color: #C9A23F; /* gold */
+  letter-spacing: 0.15em;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7); /* readability */
+  margin-bottom: 20px;
+}
+
+/* Message */
+.coming-message {
+  font-size: 1.3rem;
+  color: #FFFFFF;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  text-shadow: 0 0 8px rgba(0,0,0,0.6);
+  max-width: 600px;
+}
+
+/* Tagline */
+.tagline {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  color: #C9A23F;
+  text-transform: uppercase;
+  margin-top: 15px;
+  text-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
