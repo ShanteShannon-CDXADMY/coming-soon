@@ -3,7 +3,9 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 
-  background: url("newLogo.PNG") no-repeat center center fixed;
+  background-image: url("newLogo.PNG");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 
   color: #FFFFFF;
@@ -16,53 +18,37 @@ body {
 
   min-height: 100vh;
   padding-top: 60px;
-
-  /* ⭐ Soft overlay so text doesn't clash with the logo */
-  position: relative;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.35); /* darkens background slightly */
-  z-index: 0;
-}
-
-h1, p {
-  position: relative;
-  z-index: 1; /* keeps text above overlay */
 }
 
 /* Title */
 .coming-title {
   font-family: 'Cinzel', serif;
-  font-size: 2.6rem; /* smaller for desktop */
+  font-size: 2.4rem;
   color: #C9A23F;
   letter-spacing: 0.12em;
-  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  text-shadow: 0 0 8px rgba(0,0,0,0.6);
   margin-bottom: 20px;
 }
 
 /* Message */
 .coming-message {
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.5;
   max-width: 600px;
-  text-shadow: 0 0 8px rgba(0,0,0,0.6);
+  text-shadow: 0 0 6px rgba(0,0,0,0.5);
 }
 
 /* Tagline */
 .tagline {
   font-family: 'Cinzel', serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #C9A23F;
   text-transform: uppercase;
   margin-top: 15px;
-  text-shadow: 0 0 8px rgba(0,0,0,0.6);
+  text-shadow: 0 0 6px rgba(0,0,0,0.5);
 }
 
-/* ⭐ Mobile adjustments */
+/* Mobile adjustments */
 @media (max-width: 640px) {
 
   body {
@@ -70,19 +56,20 @@ h1, p {
   }
 
   .coming-title {
-    font-size: 2.8rem; /* reduced from 4rem */
-    letter-spacing: 0.15em;
+    font-size: 2.6rem;
+    letter-spacing: 0.14em;
   }
 
   .coming-message {
-    font-size: 1.4rem; /* reduced from 1.8rem */
-    line-height: 1.7;
+    font-size: 1.3rem;
+    line-height: 1.6;
     max-width: 85%;
   }
 
   .tagline {
-    font-size: 1.2rem; /* reduced */
-    letter-spacing: 0.12em;
+    font-size: 1.1rem;
+    letter-spacing: 0.10em;
   }
 }
+
 
