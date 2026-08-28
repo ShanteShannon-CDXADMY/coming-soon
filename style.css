@@ -1,12 +1,12 @@
 /* ============================
-   GLOBAL / DESKTOP STYLES
+   GLOBAL STYLES
    ============================ */
 
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 
-  /* Gradient background using your logo colors */
+  /* Gradient background */
   background: linear-gradient(
     to bottom,
     #0A1F44,   /* navy */
@@ -23,31 +23,38 @@ body {
   min-height: 100vh;
 }
 
-/* Logo at the top */
-.logo-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+/* Desktop background logo */
+@media (min-width: 769px) {
+  body {
+    background-image: url("newLogo.PNG");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
+}
+
+/* Mobile logo image */
+.mobile-logo {
+  display: none; /* hidden on desktop */
+}
+
+.mobile-logo img {
+  width: 220px;
+  height: auto;
   margin-top: 20px;
 }
 
-.logo-img {
-  width: 260px;      /* adjust size here */
-  height: auto;
-}
-
-/* Centered text container */
+/* Centered content */
 .content {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  flex: 1; /* centers vertically */
   padding: 20px;
 }
 
-/* Headline */
+/* Text styles (same rem for desktop + mobile) */
 .coming-title {
   font-family: 'Cinzel', serif;
   font-size: 3rem;
@@ -57,7 +64,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Message */
 .coming-message {
   font-size: 1.4rem;
   line-height: 1.6;
@@ -65,7 +71,6 @@ body {
   text-shadow: 0 0 6px rgba(0,0,0,0.5);
 }
 
-/* Tagline */
 .tagline {
   font-family: 'Cinzel', serif;
   font-size: 1.1rem;
@@ -82,23 +87,27 @@ body {
 
 @media (max-width: 768px) {
 
-  .logo-img {
-    width: 180px;   /* smaller logo on mobile */
+  /* Show mobile logo */
+  .mobile-logo {
+    display: flex;
+    justify-content: center;
   }
 
+  /* Remove desktop background */
+  body {
+    background-image: none;
+  }
+
+  /* Same text sizes (you requested same rem) */
   .coming-title {
-    font-size: 5rem;
-    letter-spacing: 0.15em;
+    font-size: 3rem;
   }
 
   .coming-message {
-    font-size: 3.5rem;
-    line-height: 1.7;
-    max-width: 85%;
+    font-size: 1.4rem;
   }
 
   .tagline {
-    font-size: 3rem;
-    letter-spacing: 0.12em;
+    font-size: 1.1rem;
   }
 }
