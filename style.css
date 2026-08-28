@@ -37,7 +37,14 @@ body {
 /* Message */
 .coming-message {
   font-size: 3rem;
+<<<<<<< HEAD
   line-height: 1.5;
+=======
+  color: #FFFFFF;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  text-shadow: 0 0 8px rgba(0,0,0,0.6);
+>>>>>>> 4b003c3 (updates css)
   max-width: 600px;
   text-shadow: 0 0 6px rgba(0,0,0,0.5);
 }
