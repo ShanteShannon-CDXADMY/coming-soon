@@ -1,11 +1,15 @@
-/* Full-page background logo */
+/* ============================
+   GLOBAL / DESKTOP STYLES
+   ============================ */
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 
+  /* Desktop background */
   background-image: url("newLogo.PNG");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center top;
   background-size: cover;
 
   color: #FFFFFF;
@@ -20,10 +24,10 @@ body {
   padding-top: 60px;
 }
 
-/* Title */
+/* Headline */
 .coming-title {
   font-family: 'Cinzel', serif;
-  font-size: 5rem;
+  font-size: 2.4rem;
   color: #C9A23F;
   letter-spacing: 0.12em;
   text-shadow: 0 0 8px rgba(0,0,0,0.6);
@@ -32,7 +36,7 @@ body {
 
 /* Message */
 .coming-message {
-  font-size: 3.5rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   max-width: 600px;
   text-shadow: 0 0 6px rgba(0,0,0,0.5);
@@ -41,43 +45,44 @@ body {
 /* Tagline */
 .tagline {
   font-family: 'Cinzel', serif;
-  font-size: 2.5rem;
+  font-size: 0.9rem;
   color: #C9A23F;
   text-transform: uppercase;
   margin-top: 15px;
   text-shadow: 0 0 6px rgba(0,0,0,0.5);
 }
 
-/* Mobile adjustments */
-@media (max-width: 640px) {
-/* Mobile background fix */
+
+/* ============================
+   MOBILE ADJUSTMENTS
+   ============================ */
+
 @media (max-width: 768px) {
+
+  /* Make the logo fit the screen */
   body {
-    background-size: center;   /* fits the whole logo */
+    background-size: contain;     /* shows the whole logo */
     background-position: top center;
     background-repeat: no-repeat;
-  }
-}
-
-  body {
-    padding-top: 70px;
+    padding-top: 40px;
   }
 
+  /* Larger mobile headline */
   .coming-title {
-    font-size: 5rem;
-    letter-spacing: 0.14em;
+    font-size: 2.8rem;
+    letter-spacing: 0.15em;
   }
 
+  /* Larger mobile message */
   .coming-message {
-    font-size: 3rem;
-    line-height: 1.6;
+    font-size: 1.4rem;
+    line-height: 1.7;
     max-width: 85%;
   }
 
+  /* Larger mobile tagline */
   .tagline {
-    font-size: 3rem;
-    letter-spacing: 0.10em;
+    font-size: 1.2rem;
+    letter-spacing: 0.12em;
   }
 }
-
-
