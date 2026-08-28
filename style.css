@@ -53,7 +53,7 @@ body {
 /* Mobile background fix */
 @media (max-width: 768px) {
   body {
-    background-size: contain;   /* fits the whole logo */
+    background-size: center;   /* fits the whole logo */
     background-position: top center;
     background-repeat: no-repeat;
   }
