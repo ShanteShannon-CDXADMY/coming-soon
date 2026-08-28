@@ -6,28 +6,51 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 
-  /* Desktop background */
-  background-image: url("newLogo.PNG");
-  background-repeat: no-repeat;
-  background-position: center-top;
-  background-size: cover;
+  /* Gradient background using your logo colors */
+  background: linear-gradient(
+    to bottom,
+    #0A1F44,   /* navy */
+    #000000    /* black */
+  );
 
   color: #FFFFFF;
   text-align: center;
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
 
   min-height: 100vh;
-  padding-top: 60px;
+}
+
+/* Logo at the top */
+.logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.logo-img {
+  width: 260px;      /* adjust size here */
+  height: auto;
+}
+
+/* Centered text container */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  flex: 1; /* centers vertically */
+  padding: 20px;
 }
 
 /* Headline */
 .coming-title {
   font-family: 'Cinzel', serif;
-  font-size: 10rem;
+  font-size: 3rem;
   color: #C9A23F;
   letter-spacing: 0.12em;
   text-shadow: 0 0 8px rgba(0,0,0,0.6);
@@ -36,8 +59,8 @@ body {
 
 /* Message */
 .coming-message {
-  font-size: 3rem;
-  line-height: 1.5;
+  font-size: 1.4rem;
+  line-height: 1.6;
   max-width: 600px;
   text-shadow: 0 0 6px rgba(0,0,0,0.5);
 }
@@ -45,7 +68,7 @@ body {
 /* Tagline */
 .tagline {
   font-family: 'Cinzel', serif;
-  font-size: 3rem;
+  font-size: 1.1rem;
   color: #C9A23F;
   text-transform: uppercase;
   margin-top: 15px;
@@ -59,30 +82,23 @@ body {
 
 @media (max-width: 768px) {
 
-  /* Make the logo fit the screen */
-  body {
-    background-size: contain;     /* shows the whole logo */
-    background-position: top center;
-    background-repeat: repeat;
-    padding-top: 40px;
+  .logo-img {
+    width: 180px;   /* smaller logo on mobile */
   }
 
-  /* Larger mobile headline */
   .coming-title {
     font-size: 5rem;
     letter-spacing: 0.15em;
   }
 
-  /* Larger mobile message */
   .coming-message {
     font-size: 3.5rem;
     line-height: 1.7;
     max-width: 85%;
   }
 
-  /* Larger mobile tagline */
   .tagline {
-    font-size: 2.5rem;
+    font-size: 3rem;
     letter-spacing: 0.12em;
   }
 }
