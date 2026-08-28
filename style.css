@@ -57,7 +57,7 @@ body {
 /* Text styles (same rem for desktop + mobile) */
 .coming-title {
   font-family: 'Cinzel', serif;
-  font-size: 3rem;
+  font-size: 5rem;
   color: #C9A23F;
   letter-spacing: 0.12em;
   text-shadow: 0 0 8px rgba(0,0,0,0.6);
@@ -174,7 +174,7 @@ body {
 /* Coming Soon (gold, large, fade-in) */
 .coming-title {
   font-family: 'Cinzel', serif;
-  font-size: 3rem;
+  font-size: 5rem;
   color: #C9A23F;
   letter-spacing: 0.12em;
   text-shadow: 0 0 8px rgba(0,0,0,0.6);
@@ -184,7 +184,7 @@ body {
 
 /* Message text (white, fade-in) */
 .coming-message {
-  font-size: 1.4rem;
+  font-size: 1.9rem;
   line-height: 1.6;
   max-width: 600px;
   text-shadow: 0 0 6px rgba(0,0,0,0.5);
@@ -194,7 +194,7 @@ body {
 /* Footer tagline (gold, fade-in) */
 .tagline {
   font-family: 'Cinzel', serif;
-  font-size: 1.1rem;
+  font-size: 2rem;
   color: #C9A23F;
   text-transform: uppercase;
   margin-bottom: 20px;
