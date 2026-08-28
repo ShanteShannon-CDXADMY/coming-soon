@@ -1,14 +1,13 @@
 /* Full-page background logo */
-/* Full-page background logo */
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 
   /* Your logo as the background */
-  background: url("newLogo.PNG"); no-repeat center center fixed;
-  background-size: cover; /* fills the whole screen */
+  background: url("logo1.png") no-repeat center center fixed;
+  background-size: cover;
 
-  color: #FFFFFF; /* white text for contrast */
+  color: #FFFFFF;
   text-align: center;
 
   display: flex;
@@ -17,22 +16,22 @@ body {
   align-items: center;
 
   min-height: 100vh;
-  padding-top: 60px; /* breathing room at the top */
+  padding-top: 60px; /* breathing room */
 }
 
 /* Title */
 .coming-title {
   font-family: 'Cinzel', serif;
-  font-size: 5rem;
-  color: #C9A23F; /* gold */
+  font-size: 3rem;
+  color: #C9A23F;
   letter-spacing: 0.15em;
-  text-shadow: 0 0 10px rgba(0,0,0,0.7); /* readability */
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
   margin-bottom: 20px;
 }
 
 /* Message */
 .coming-message {
-  font-size: 3.5rem;
+  font-size: 1.3rem;
   color: #FFFFFF;
   letter-spacing: 0.05em;
   line-height: 1.6;
@@ -43,32 +42,33 @@ body {
 /* Tagline */
 .tagline {
   font-family: 'Cinzel', serif;
-  font-size: 4rem;
+  font-size: 1rem;
   color: #C9A23F;
   text-transform: uppercase;
   margin-top: 15px;
   text-shadow: 0 0 8px rgba(0,0,0,0.6);
 }
-/* Mobile adjustments */
+
+/* ⭐ Mobile adjustments */
 @media (max-width: 640px) {
 
+  body {
+    padding-top: 90px; /* more space on phones */
+  }
+
   .coming-title {
-    font-size: 3.8rem;      /* bigger headline */
-    letter-spacing: 0.18em;
+    font-size: 4rem;      /* bigger headline */
+    letter-spacing: 0.20em;
   }
 
   .coming-message {
-    font-size: 1.6rem;      /* bigger body text */
-    line-height: 1.8;
+    font-size: 1.8rem;    /* bigger body text */
+    line-height: 1.9;
     max-width: 90%;
   }
 
   .tagline {
-    font-size: 1.3rem;      /* bigger tagline */
-    letter-spacing: 0.12em;
-  }
-
-  body {
-    padding-top: 80px;      /* more breathing room at the top */
+    font-size: 1.4rem;    /* bigger tagline */
+    letter-spacing: 0.14em;
   }
 }
