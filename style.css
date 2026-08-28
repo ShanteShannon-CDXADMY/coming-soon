@@ -9,7 +9,7 @@ body {
   /* Desktop background */
   background-image: url("newLogo.PNG");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center-top;
   background-size: cover;
 
   color: #FFFFFF;
@@ -27,7 +27,7 @@ body {
 /* Headline */
 .coming-title {
   font-family: 'Cinzel', serif;
-  font-size: 5rem;
+  font-size: 10rem;
   color: #C9A23F;
   letter-spacing: 0.12em;
   text-shadow: 0 0 8px rgba(0,0,0,0.6);
@@ -37,14 +37,7 @@ body {
 /* Message */
 .coming-message {
   font-size: 3rem;
-<<<<<<< HEAD
   line-height: 1.5;
-=======
-  color: #FFFFFF;
-  letter-spacing: 0.05em;
-  line-height: 1.6;
-  text-shadow: 0 0 8px rgba(0,0,0,0.6);
->>>>>>> 4b003c3 (updates css)
   max-width: 600px;
   text-shadow: 0 0 6px rgba(0,0,0,0.5);
 }
@@ -70,26 +63,26 @@ body {
   body {
     background-size: contain;     /* shows the whole logo */
     background-position: top center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     padding-top: 40px;
   }
 
   /* Larger mobile headline */
   .coming-title {
-    font-size: 2.8rem;
+    font-size: 5rem;
     letter-spacing: 0.15em;
   }
 
   /* Larger mobile message */
   .coming-message {
-    font-size: 1.4rem;
+    font-size: 3.5rem;
     line-height: 1.7;
     max-width: 85%;
   }
 
   /* Larger mobile tagline */
   .tagline {
-    font-size: 1.2rem;
+    font-size: 2.5rem;
     letter-spacing: 0.12em;
   }
 }
