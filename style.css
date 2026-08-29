@@ -43,9 +43,9 @@ body {
 }
 
 .mobile-logo img {
-  width: 400px;   /* ⭐ bigger mobile image */
+  width: 300px;   /* mobile size stays */
   height: auto;
-  margin-top: 30px;
+  margin-top: 5px;   /* ⭐ less space at top on mobile */
 }
 
 /* Center content */
@@ -53,9 +53,9 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center;   /* ⭐ centers text vertically */
   align-items: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 /* Coming Soon */
@@ -65,7 +65,7 @@ body {
   color: #C9A23F;
   letter-spacing: 0.12em;
   text-shadow: 0 0 8px rgba(0,0,0,0.6);
-  margin-bottom: 20px;
+  margin-bottom: 40px;   /* ⭐ more spacing under header */
   animation: fadeIn 1.2s ease-out forwards;
 }
 
@@ -74,16 +74,18 @@ body {
   font-size: 1.9rem;
   line-height: 1.6;
   max-width: 600px;
+  margin-bottom: 60px;   /* ⭐ paragraph spacing */
   text-shadow: 0 0 6px rgba(0,0,0,0.5);
   animation: fadeIn 1.6s ease-out forwards;
 }
 
-/* Tagline */
+/* Footer tagline */
 .tagline {
   font-family: 'Cinzel', serif;
   font-size: 2rem;
   color: #C9A23F;
   text-transform: uppercase;
+  margin-top: 80px;   /* ⭐ footer spacing */
   margin-bottom: 20px;
   text-shadow: 0 0 6px rgba(0,0,0,0.5);
   animation: fadeIn 2s ease-out forwards;
@@ -98,13 +100,40 @@ body {
   body {
     background-image: url("newLogo.PNG");
     background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover; /* logo covers entire background */
+
+    /* ⭐ move logo upward without shrinking it */
+    background-position: center -40px;
+
+    background-size: cover;
+    padding-top: 0;   /* ⭐ removes extra top spacing */
+  }
+
+  /* Desktop spacing refinements */
+  .content {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
 
 /* ============================
+   MOBILE ADJUSTMENTS
+   ============================ */
+
+@media (max-width: 768px) {
+
+  /* Show mobile header logo */
+  .mobile-logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Remove desktop background and restore gradient */
+  body {
+    background-image: none;
+
+    background: linear-gradient(
+      to bottom/* ============================
    MOBILE ADJUSTMENTS
    ============================ */
 
