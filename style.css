@@ -114,6 +114,7 @@ body {
   .mobile-logo {
     display: flex;
     justify-content: center;
+	width:200rem;
   }
 
   /* Remove desktop background and restore gradient */
