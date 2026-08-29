@@ -55,7 +55,7 @@ body {
   flex-direction: column;
   justify-content: center;   /* ⭐ centers text vertically */
   align-items: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 /* Coming Soon */
@@ -65,7 +65,7 @@ body {
   color: #C9A23F;
   letter-spacing: 0.12em;
   text-shadow: 0 0 8px rgba(0,0,0,0.6);
-  margin-bottom: 40px;   /* ⭐ more spacing under header */
+  margin-bottom: 20px;   /* ⭐ more spacing under header */
   animation: fadeIn 1.2s ease-out forwards;
 }
 
