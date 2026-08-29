@@ -1,117 +1,4 @@
 /* ============================
-   GLOBAL STYLES
-   ============================ */
-
-body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-
-  /* Gradient background */
-  background: linear-gradient(
-    to bottom,
-    #0A1F44,   /* navy */
-    #000000    /* black */
-  );
-
-  color: #FFFFFF;
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  min-height: 100vh;
-}
-
-/* Desktop background logo */
-@media (min-width: 769px) {
-  body {
-    background-image: url("newLogo.PNG");
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-  }
-}
-
-/* Mobile logo image */
-.mobile-logo {
-  display: none; /* hidden on desktop */
-}
-
-.mobile-logo img {
-  width: 200rem;
-  height: auto;
-  margin-top: 20px;
-}
-
-/* Centered content */
-.content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-/* Text styles (same rem for desktop + mobile) */
-.coming-title {
-  font-family: 'Cinzel', serif;
-  font-size: 5rem;
-  color: #C9A23F;
-  letter-spacing: 0.12em;
-  text-shadow: 0 0 8px rgba(0,0,0,0.6);
-  margin-bottom: 20px;
-}
-
-.coming-message {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  max-width: 600px;
-  text-shadow: 0 0 6px rgba(0,0,0,0.5);
-}
-
-.tagline {
-  font-family: 'Cinzel', serif;
-  font-size: 1.1rem;
-  color: #C9A23F;
-  text-transform: uppercase;
-  margin-top: 15px;
-  text-shadow: 0 0 6px rgba(0,0,0,0.5);
-}
-
-
-/* ============================
-   MOBILE ADJUSTMENTS
-   ============================ */
-
-@media (max-width: 768px) {
-
-  /* Show mobile logo */
-  .mobile-logo {
-    display: flex;
-    justify-content: center;
-  }
-
-  /* Remove desktop background */
-  body {
-    background-image: none;
-  }
-
-  /* Same text sizes (you requested same rem) */
-  .coming-title {
-    font-size: 3rem;
-  }
-
-  .coming-message {
-    font-size: 1.4rem;
-  }
-
-  .tagline {
-    font-size: 1.1rem;
-  }
-}
-/* ============================
    FADE-IN ANIMATION
    ============================ */
 
@@ -135,11 +22,11 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 
-  /* Gradient background for all devices */
+  /* Default gradient background (mobile + fallback) */
   background: linear-gradient(
     to bottom,
-    #0A1F44,   /* navy */
-    #000000    /* black */
+    #0A1F44,
+    #000000
   );
 
   color: #FFFFFF;
@@ -150,18 +37,18 @@ body {
   min-height: 100vh;
 }
 
-/* Hide mobile logo on desktop */
+/* Mobile logo hidden on desktop */
 .mobile-logo {
   display: none;
 }
 
 .mobile-logo img {
-  width: 220px;
+  width: 220px;   /* fixed from 200rem */
   height: auto;
   margin-top: 20px;
 }
 
-/* Center content vertically */
+/* Center content */
 .content {
   flex: 1;
   display: flex;
@@ -171,7 +58,7 @@ body {
   padding: 20px;
 }
 
-/* Coming Soon (gold, large, fade-in) */
+/* Coming Soon */
 .coming-title {
   font-family: 'Cinzel', serif;
   font-size: 5rem;
@@ -182,7 +69,7 @@ body {
   animation: fadeIn 1.2s ease-out forwards;
 }
 
-/* Message text (white, fade-in) */
+/* Message */
 .coming-message {
   font-size: 1.9rem;
   line-height: 1.6;
@@ -191,7 +78,7 @@ body {
   animation: fadeIn 1.6s ease-out forwards;
 }
 
-/* Footer tagline (gold, fade-in) */
+/* Tagline */
 .tagline {
   font-family: 'Cinzel', serif;
   font-size: 2rem;
@@ -229,12 +116,18 @@ body {
     justify-content: center;
   }
 
-  /* Remove desktop background image */
+  /* Remove desktop background and restore gradient */
   body {
     background-image: none;
+
+    background: linear-gradient(
+      to bottom,
+      #0A1F44,
+      #000000
+    );
   }
 
-  /* Same text sizes on mobile */
+  /* Mobile text sizes */
   .coming-title {
     font-size: 3rem;
   }
