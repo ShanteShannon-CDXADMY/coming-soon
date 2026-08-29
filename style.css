@@ -45,7 +45,7 @@ body {
 .mobile-logo img {
   width: 300px;   /* ⭐ bigger mobile image */
   height: auto;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 /* Center content */
@@ -55,7 +55,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 /* Coming Soon */
