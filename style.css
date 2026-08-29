@@ -43,9 +43,9 @@ body {
 }
 
 .mobile-logo img {
-  width: 300px;   /* ⭐ bigger mobile image */
+  width: 400px;   /* ⭐ bigger mobile image */
   height: auto;
-  margin-top: 15px;
+  margin-top: 30px;
 }
 
 /* Center content */
