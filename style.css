@@ -152,17 +152,17 @@ body {
 
   /* Faster fade-in text */
   .coming-title {
-    font-size: 3rem;
-    animation: fadeIn 1s ease-out forwards;
+    font-size: 3.5rem;
+    animation: fadeIn .5s ease-out forwards;
   }
 
   .coming-message {
-    font-size: 1.4rem;
-    animation: fadeIn 1.3s ease-out forwards;
+    font-size: 2rem;
+    animation: fadeIn 1.6s ease-out forwards;
   }
 
   .tagline {
     font-size: 1.1rem;
-    animation: fadeIn 1.6s ease-out forwards;
+    animation: fadeIn 1.5 ease-out forwards;
   }
 }
