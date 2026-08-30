@@ -119,25 +119,23 @@ body {
 
 @media (max-width: 768px) {
 
-  /* Show mobile header logo */
-  .mobile-logo {
-    display: flex;
-    justify-content: center;
-  }
-
-  /* Smaller logo + gold glow + shadow */
-  .mobile-logo img {
-    width: 160px;
+  /* Centerpiece mascot image */
+  .centerpiece img {
+    width: 220px;                 /* perfect mobile size */
     height: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+
+    margin-top: 30px;             /* even spacing above */
+    margin-bottom: 30px;          /* even spacing below */
 
     /* Gold glow + shadow */
     box-shadow:
-      0 0 25px rgba(201, 162, 63, 0.55),
-      0 6px 10px rgba(0,0,0,0.55);
+      0 0 30px rgba(201, 162, 63, 0.55),   /* gold glow */
+      0 8px 14px rgba(0,0,0,0.55);         /* shadow */
 
-    border-radius: 14px;
+    border-radius: 16px;
+
+    /* Smooth fade-in */
+    animation: fadeIn 0.8s ease-out forwards;
   }
 
   /* Dramatic gradient background */
@@ -150,21 +148,22 @@ body {
     );
   }
 
-  /* Faster fade-in text */
+  /* Faster fade-in title */
   .coming-title {
     font-size: 3rem;
-    animation: fadeIn 0.7s ease-out forwards;
+    animation: fadeIn 0.5s ease-out forwards;
   }
 
+  /* Faster fade-in message */
   .coming-message {
     font-size: 1.4rem;
-    animation: fadeIn 0.9s ease-out forwards;
+    animation: fadeIn 0.7s ease-out forwards;
   }
 
   /* Tagline closer to message + faster fade */
   .tagline {
     font-size: 1.1rem;
-    margin-top: 10px;
-    animation: fadeIn 1.1s ease-out forwards;
+    margin-top: 5px;
+    animation: fadeIn 0.5s ease-out forwards;
   }
 }
