@@ -121,7 +121,7 @@ body {
 
   /* Centerpiece mascot image (larger, no glow, no shadow) */
   .centerpiece img {
-    width: 260px;        /* larger centerpiece */
+    width: 85rem;        /* larger centerpiece */
     height: auto;
 	display:block;
 	margin:auto;
@@ -132,7 +132,7 @@ body {
 
   /* Smaller logo with even spacing */
   .center-logo img {
-    width: 200px;        /* smaller logo */
+    width: 30rem;        /* smaller logo */
     height: auto;
 	margin-top: .5px;
     margin-bottom: 15px;
@@ -154,7 +154,7 @@ body {
     font-size: 4rem;           /* bigger than before */
     letter-spacing: 0.5rem;      /* subtle emphasis */
     animation: fadeIn 0.5s ease-out forwards;
-	text-align:center;
+	/* text-align:center; */
   }
 
   /* Slightly larger message text */
@@ -162,7 +162,7 @@ body {
     font-size: 1.9rem;          /* slightly bigger */
     line-height: 2;
     /* animation: fadeIn 0.7s ease-out forwards; */
-	text-align:center;
+	/* text-align:center; */
   }
 
   /* Slightly larger tagline + closer spacing */
