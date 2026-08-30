@@ -131,11 +131,13 @@ body {
 
   /* Large centerpiece image */
   .centerpiece img {
-    width: 150px;        /* larger centerpiece */
+	  display:block;
+	  margin:auto;
+    width: 75px;        /* larger centerpiece */
     height: auto;
     margin-top: 30px;
     margin-bottom: 30px;
-    border-radius: 12px; /* clean edges, no glow */
+    /* border-radius: 12px; /* clean edges, no glow */ */
   }
 
   /* Large Coming Soon text */
@@ -149,10 +151,11 @@ body {
 
   /* Slightly larger message text */
   .coming-message {
+	  font-family: courier;
     font-size: 2.5rem;
     line-height: 1.6;
     margin-bottom: 25px;
-    animation: fadeIn 0.7s ease-out forwards;
+    /* animation: fadeIn 0.7s ease-out forwards; */
   }
 
   /* Bottom section container */
@@ -161,6 +164,8 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+	padding: 5px;
+	gap: 5px;
   }
 
   /* Tagline centered above the logo */
@@ -176,10 +181,10 @@ body {
   .bottom-logo {
 	  display:block;
 	  margin:auto;
-    width: 130px;        /* smaller + more visible */
+    width: 50px;        /* smaller + more visible */
     height: auto;
     margin-bottom: 30px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     /* animation: fadeIn 1s ease-out forwards; */
   }
 }
