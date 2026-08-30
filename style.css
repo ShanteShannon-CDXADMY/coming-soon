@@ -127,13 +127,14 @@ body {
       #0D2A6A,
       #000000
     );
+	margin:5px;
   }
 
   /* Large centerpiece image */
   .centerpiece img {
 	  display:block;
 	  margin:auto;
-    width: 75px;        /* larger centerpiece */
+    width: 150px;        /* larger centerpiece */
     height: auto;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -142,11 +143,11 @@ body {
 
   /* Large Coming Soon text */
   .coming-title {
-    font-size: 8rem;     /* big and attention-grabbing */
+    font-size: 3.5rem;     /* big and attention-grabbing */
     color: #C9A23F;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.3em;
     margin-bottom: 20px;
-    animation: fadeIn 0.5s ease-out forwards;
+    animation: fadeIn 0.8s ease-out forwards;
   }
 
   /* Slightly larger message text */
@@ -173,15 +174,16 @@ body {
     font-size: 1.8rem;   /* slightly larger */
     color: #C9A23F;
     text-align: center;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     animation: fadeIn 0.9s ease-out forwards;
+	
   }
 
   /* Smaller bottom logo */
   .bottom-logo {
 	  display:block;
 	  margin:auto;
-    width: 50px;        /* smaller + more visible */
+    width: 75px;        /* smaller + more visible */
     height: auto;
     margin-bottom: 30px;
     /* border-radius: 10px; */
