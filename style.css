@@ -121,21 +121,21 @@ body {
 
   /* Centerpiece mascot image */
   .centerpiece img {
-    width: 100px;                 /* perfect mobile size */
+    width:350px;                 /* perfect mobile size */
     height: auto;
 
-    margin-top: 30px;             /* even spacing above */
-    margin-bottom: 30px;          /* even spacing below */
+    margin-top: 15px;             /* even spacing above */
+    margin-bottom: 15px;          /* even spacing below */
 
     /* Gold glow + shadow */
-    box-shadow:
+    /* box-shadow: */
       0 0 30px rgba(201, 162, 63, 0.55),   /* gold glow */
       0 8px 14px rgba(0,0,0,0.55);         /* shadow */
 
-    border-radius: 16px;
+    /* border-radius: 16px; */
 
     /* Smooth fade-in */
-    animation: fadeIn 0.8s ease-out forwards;
+    /* animation: fadeIn 0.8s ease-out forwards; */
   }
 
   /* Dramatic gradient background */
