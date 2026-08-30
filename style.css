@@ -125,19 +125,19 @@ body {
     justify-content: center;
   }
 
-  /* Resize logo + add shadow + gold glow */
+  /* Smaller logo + gold glow + shadow */
   .mobile-logo img {
-    width: 220px;
+    width: 180px;
     height: auto;
     margin-top: 25px;
     margin-bottom: 25px;
 
     /* Shadow under logo */
-    filter: drop-shadow(0px 6px 10px rgba(0,0,0,0.6));
+    filter: drop-shadow(0px 5px 8px rgba(0,0,0,0.55));
 
     /* Gold glow */
-    box-shadow: 0 0 25px rgba(201, 162, 63, 0.55);
-    border-radius: 12px;
+    box-shadow: 0 0 22px rgba(201, 162, 63, 0.55);
+    border-radius: 14px;
   }
 
   /* Dramatic gradient background */
@@ -150,16 +150,19 @@ body {
     );
   }
 
-  /* Mobile text sizes */
+  /* Faster fade-in text */
   .coming-title {
     font-size: 3rem;
+    animation: fadeIn 1s ease-out forwards;
   }
 
   .coming-message {
     font-size: 1.4rem;
+    animation: fadeIn 1.3s ease-out forwards;
   }
 
   .tagline {
     font-size: 1.1rem;
+    animation: fadeIn 1.6s ease-out forwards;
   }
 }
