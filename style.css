@@ -119,23 +119,26 @@ body {
 
 @media (max-width: 768px) {
 
-  /* Centerpiece mascot image */
+  /* Centerpiece mascot image (larger, no glow, no shadow) */
   .centerpiece img {
-    width:350px;                 /* perfect mobile size */
+    width: 260px;        /* larger centerpiece */
     height: auto;
 
-    margin-top: 15px;             /* even spacing above */
-    margin-bottom: 15px;          /* even spacing below */
+    margin-top: 30px;    /* even spacing above */
+    margin-bottom: 30px; /* even spacing below */
 
-    /* Gold glow + shadow */
-    /* box-shadow: */
-      0 0 30px rgba(201, 162, 63, 0.55),   /* gold glow */
-      0 8px 14px rgba(0,0,0,0.55);         /* shadow */
+    border-radius: 12px; /* soft edges only */
+  }
 
-    /* border-radius: 16px; */
+  /* Smaller logo with even spacing */
+  .center-logo img {
+    width: 140px;        /* smaller logo */
+    height: auto;
 
-    /* Smooth fade-in */
-    /* animation: fadeIn 0.8s ease-out forwards; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    border-radius: 10px; /* clean, simple */
   }
 
   /* Dramatic gradient background */
@@ -148,22 +151,24 @@ body {
     );
   }
 
-  /* Faster fade-in title */
+  /* Larger, attention-grabbing "Coming Soon" */
   .coming-title {
-    font-size: 3rem;
+    font-size: 3.6rem;           /* bigger than before */
+    letter-spacing: 0.05em;      /* subtle emphasis */
     animation: fadeIn 0.5s ease-out forwards;
   }
 
-  /* Faster fade-in message */
+  /* Slightly larger message text */
   .coming-message {
-    font-size: 1.4rem;
+    font-size: 1.55rem;          /* slightly bigger */
+    line-height: 1.6;
     animation: fadeIn 0.7s ease-out forwards;
   }
 
-  /* Tagline closer to message + faster fade */
+  /* Slightly larger tagline + closer spacing */
   .tagline {
-    font-size: 1.1rem;
-    margin-top: 5px;
-    animation: fadeIn 0.5s ease-out forwards;
+    font-size: 1.25rem;          /* slightly bigger */
+    margin-top: 12px;
+    animation: fadeIn 0.9s ease-out forwards;
   }
 }
