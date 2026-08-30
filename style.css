@@ -125,12 +125,27 @@ body {
     justify-content: center;
   }
 
-  /* Restore gradient background */
+  /* Resize logo + add shadow + gold glow */
+  .mobile-logo img {
+    width: 220px;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    /* Shadow under logo */
+    filter: drop-shadow(0px 6px 10px rgba(0,0,0,0.6));
+
+    /* Gold glow */
+    box-shadow: 0 0 25px rgba(201, 162, 63, 0.55);
+    border-radius: 12px;
+  }
+
+  /* Dramatic gradient background */
   body {
     background-image: none;
     background: linear-gradient(
       to bottom,
-      #0A1F44,
+      #0D2A6A,
       #000000
     );
   }
