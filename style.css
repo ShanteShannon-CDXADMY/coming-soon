@@ -73,15 +73,17 @@ body {
     display: block !important;
     width: 350px;
     max-width: 40%;
-    height: 390px;
+    height: 375px;
 
     /* Corner placement WITHOUT absolute positioning */
     align-self: flex-start;
-    margin-top: -185px;
+    margin-top: -165px;
     margin-left: auto;
     margin-right: -300px;
-	/* right:-150px; */
-	/* top:-185px; */
+	box-shadow:
+    0 0 15px rgba(0, 102, 255, 0.7),
+    0 0 30px rgba(0, 102, 255, 0.5),
+    0 0 45px rgba(0, 102, 255, 0.3);
   }
 
   /* ⭐ Text sits directly next to the image */
@@ -102,7 +104,7 @@ body {
     color: #C9A23F;
     font-family: Cinzel;
     font-size: 4.3rem;
-    letter-spacing: 1.3rem;
+    letter-spacing: 1rem;
 	animation: fadeUp 1s ease-out forwards;
   }
 
@@ -112,7 +114,7 @@ body {
     font-size: 1.9rem;
     line-height: 1.6;
     max-width: 400px;
-    font-family: monospace;
+    font-family: courier;
     margin-top: -215px;
 	margin-right:165px;
 	margin-left:auto;
@@ -144,21 +146,27 @@ body {
     width: min(400px, 90%);
     height: auto;
     margin: 20px auto;
+	box-shadow:
+    0 0 15px rgba(255, 255, 255, 0.7),
+    0 0 30px rgba(255, 255, 255, 0.5),
+    0 0 45px rgba(255, 255, 255, 0.3);
+}
 
-  }
-.coming-title{
+
+ .coming-title{
 	text-align:center;
 	font-size:2.3rem;
-	letter-spacing:1.3rem;
+	letter-spacing:1rem;
 	color: #C9A23F;
 	animation: fadeUp 1s ease-out forwards;
 }
   /* ⭐ Paragraph under centerpiece */
   .coming-message {
-    font-size: clamp(1.2rem, 4vw, 1.7rem);
+    font-size: clamp(1.9rem, 4vw, 1.7rem);
     text-align: center;
     line-height: 1.6;
     margin-bottom: 25px;
+	font-family:courier;
   }
 
   /* ⭐ Logo above footer */
@@ -167,12 +175,18 @@ body {
     width: min(550px, 90%);
     height:150px;
     margin: 20px auto;
+	
+	box-shadow:
+    0 0 15px rgba(0, 102, 255, 0.7),
+    0 0 30px rgba(0, 102, 255, 0.5),
+    0 0 45px rgba(0, 102, 255, 0.3);
   }
 
     
   /* ⭐ Footer last */
   .site-footer {
     margin-top: 40px;
+	margin-bottom:20px;
 	animation: fadeUp 1s ease-out forwards;
   }
 
