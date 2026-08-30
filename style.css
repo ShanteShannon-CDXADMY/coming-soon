@@ -103,6 +103,7 @@ body {
     font-family: Cinzel;
     font-size: 4.3rem;
     letter-spacing: 1.3rem;
+	animation: fadeUp 1s ease-out forwards;
   }
 
   /* ⭐ Text closer to H1 */
@@ -120,6 +121,7 @@ body {
 
   footer {
     margin-top: 225px;
+	animation: fadeUp 1s ease-out forwards;
   }
 }
 
@@ -149,6 +151,7 @@ body {
 	font-size:2.3rem;
 	letter-spacing:1.3rem;
 	color: #C9A23F;
+	animation: fadeUp 1s ease-out forwards;
 }
   /* ⭐ Paragraph under centerpiece */
   .coming-message {
@@ -170,6 +173,7 @@ body {
   /* ⭐ Footer last */
   .site-footer {
     margin-top: 40px;
+	animation: fadeUp 1s ease-out forwards;
   }
 
   /* ⭐ Mobile layout stacks naturally */
