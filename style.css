@@ -1,125 +1,86 @@
-/* ============================
-   FADE-IN ANIMATION
-   ============================ */
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-/* ============================
+/* ===========================
    GLOBAL STYLES
-   ============================ */
+   =========================== */
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
-
-  /* Default gradient background (mobile + fallback) */
-  background: linear-gradient(
-    to bottom,
-    #0A1F44,
-    #000000
-  );
-
-  color: #FFFFFF;
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
 }
 
-/* Mobile logo hidden on desktop */
-.mobile-logo {
+/* Prevent content from touching edges */
+.content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Hide images by default (desktop) */
+.centerpiece img,
+.bottom-logo {
   display: none;
 }
 
-.mobile-logo img {
-  width: 400px;
-  height: auto;
-  margin-top: 5px;
-}
-
-/* Center content */
-.content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-}
-
-/* Coming Soon */
-.coming-title {
-  font-family: 'Cinzel', serif;
-  font-size: 5rem;
-  color: #C9A23F;
-  letter-spacing: 0.12em;
-  text-shadow: 0 0 8px rgba(0,0,0,0.6);
-  margin-bottom: 10px;
-  animation: fadeIn 1.2s ease-out forwards;
-}
-
-/* Message */
-.coming-message {
-  font-size: 1.9rem;
-  line-height: 1.6;
-  max-width: 600px;
-  margin-bottom: 60px;
-  text-shadow: 0 0 6px rgba(0,0,0,0.5);
-  animation: fadeIn 1.6s ease-out forwards;
-}
-
-/* Footer tagline */
-.tagline {
-  font-family: 'Cinzel', serif;
-  font-size: 2rem;
-  color: #C9A23F;
-  text-transform: uppercase;
-  margin-top: 80px;
-  margin-bottom: 20px;
-  text-shadow: 0 0 6px rgba(0,0,0,0.5);
-  animation: fadeIn 2s ease-out forwards;
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 
-/* ============================
-   DESKTOP BACKGROUND + SPACING
-   ============================ */
+/* ===========================
+   DESKTOP — LOGO BACKGROUND
+   =========================== */
 
 @media (min-width: 769px) {
+
+  /* Desktop background = your logo */
   body {
+    background-color: white; /* your original desktop look */
     background-image: url("newLogo.PNG");
     background-repeat: no-repeat;
     background-position: center -40px;
     background-size: cover;
-    padding-top: 0;
   }
 
-  /* Increased spacing around text */
-  .content {
-    padding-top: 1px;   /* more breathing room */
-    padding-bottom: 100px;
+  /* Centered desktop text */
+  .coming-title {
+    font-size: 5rem;
+    color: #C9A23F;
+    text-align: center;
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .coming-message {
+    font-size: 2rem;
+    line-height: 1.6;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .tagline {
+    font-size: 2rem;
+    margin-top: 40px;
+    color: #C9A23F;
+    text-align: center;
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  /* Hide ALL images on desktop */
+  .centerpiece img,
+  .bottom-logo {
+    display: none;
   }
 }
 
 
-/* ============================
-   MOBILE ADJUSTMENTS
-   ============================ */
+/* ===========================
+   MOBILE — GRADIENT + IMAGES
+   =========================== */
 
 @media (max-width: 768px) {
 
-  /* Dramatic gradient background */
+  /* Mobile gradient background */
   body {
     background-image: none;
     background: linear-gradient(
@@ -127,36 +88,35 @@ body {
       #0D2A6A,
       #000000
     );
-	margin:5px;
   }
 
-  /* Large centerpiece image */
+  /* Centerpiece image — perfect mobile size */
   .centerpiece img {
-	  display:block;
-	  margin:auto;
-    width: 150px;        /* larger centerpiece */
+    display: block;
+    width: 260px;        /* big but not too big */
     height: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    /* border-radius: 12px; /* clean edges, no glow */ */
+    margin: 30px auto;   /* centered with even spacing */
+    border-radius: 12px;
+    animation: fadeIn 0.6s ease-out forwards;
   }
 
-  /* Large Coming Soon text */
+  /* Coming Soon — large + stretched across */
   .coming-title {
-    font-size: 3.5rem;     /* big and attention-grabbing */
+    font-size: 4.2rem;
     color: #C9A23F;
-    letter-spacing: 0.3em;
+    text-align: left;    /* goes across instead of centered */
+    width: 100%;
     margin-bottom: 20px;
-    animation: fadeIn 0.8s ease-out forwards;
+    animation: fadeIn 0.5s ease-out forwards;
   }
 
   /* Slightly larger message text */
   .coming-message {
-	  font-family: courier;
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     line-height: 1.6;
+    text-align: left;
     margin-bottom: 25px;
-    /* animation: fadeIn 0.7s ease-out forwards; */
+    animation: fadeIn 0.7s ease-out forwards;
   }
 
   /* Bottom section container */
@@ -165,28 +125,24 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
-	padding: 5px;
-	gap: 5px;
   }
 
   /* Tagline centered above the logo */
   .tagline {
-    font-size: 1.8rem;   /* slightly larger */
+    font-size: 1.3rem;
     color: #C9A23F;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     animation: fadeIn 0.9s ease-out forwards;
-	
   }
 
-  /* Smaller bottom logo */
+  /* Bottom logo — visible only on mobile */
   .bottom-logo {
-	  display:block;
-	  margin:auto;
-    width: 75px;        /* smaller + more visible */
+    display: block;
+    width: 120px;        /* smaller + clean */
     height: auto;
     margin-bottom: 30px;
-    /* border-radius: 10px; */
-    /* animation: fadeIn 1s ease-out forwards; */
+    border-radius: 10px;
+    animation: fadeIn 1s ease-out forwards;
   }
 }
