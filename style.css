@@ -93,7 +93,13 @@ body {
       #0D2A6A,
       #000000
     );
-	font-family:cinzel;
+    font-family: cinzel;
+  }
+
+  /* Prevent content from touching edges */
+  .content {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   /* Centerpiece image — perfect mobile size */
@@ -101,29 +107,26 @@ body {
     display: block;
     width: 400px;        /* big but not too big */
     height: auto;
-    margin: auto;   /* centered with even spacing */
-    /* border-radius: 12px; */
-    /* animation: fadeIn 0.6s ease-out forwards; */
+    margin: 30px auto;   /* centered with spacing */
   }
 
-  /* Coming Soon — large + stretched across */
+  /* Coming Soon — large + centered */
   .coming-title {
     font-size: 3.5rem;
     color: #C9A23F;
-    text-align: center;    /* goes across instead of centered */
+    text-align: center;
     width: 100%;
     margin-bottom: 20px;
     animation: fadeIn 0.5s ease-out forwards;
   }
 
-  /* Slightly larger message text */
+  /* Message text — centered + larger */
   .coming-message {
     font-size: 1.7rem;
     line-height: 1.6;
-    text-align: left;
+    text-align: center;
     margin-bottom: 25px;
     animation: fadeIn 0.7s ease-out forwards;
-	text-align:center;
   }
 
   /* Bottom section container */
@@ -146,10 +149,9 @@ body {
   /* Bottom logo — visible only on mobile */
   .brand-logo {
     display: block;
-    width: 120px;        /* smaller + clean */
+    width: 120px;
     height: auto;
-    margin:auto;
-    /* border-radius: 10px; */
+    margin: 0 auto 30px auto;
     animation: fadeIn 1s ease-out forwards;
   }
 }
