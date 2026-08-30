@@ -5,153 +5,175 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: cinzel;
+  font-family: Cinzel;
   color: white;
 }
 
-/* Prevent content from touching edges */
 .content {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
+/* Hide only the mobile logo on desktop */
+.brand-logo {
+  display: none;
+}
 
-/* Fade-in animation */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Fade-up animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
 /* ===========================
-   DESKTOP — LOGO BACKGROUND
+   FOOTER
+   =========================== */
+
+.site-footer {
+  text-align: center;
+  padding: 5px 35px;
+  font-size: 1.5rem;
+  color: #C9A23F;
+}
+
+
+/* ===========================
+   DESKTOP — IMAGE IN CORNER + TEXT NEXT TO IT + WRAPS
    =========================== */
 
 @media (min-width: 769px) {
 
-  /* Desktop background = your logo */
   body {
-    background-color: white; /* your original desktop look */
+    background-color: white;
     background-image: url("newLogo.PNG");
     background-repeat: no-repeat;
     background-position: center -40px;
     background-size: cover;
- }	
-/* Hide images by default (desktop) */
-.centerpiece img,
-.brand-logo  {
-  display: none;
-}
- 
+  }
 
-  /* Centered desktop text */
+  .desktop-wrapper {
+    display: block;
+    width: 900px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5px 55px;
+    text-align: center;
+    position: relative;
+  }
+
+  /* ⭐ Centerpiece image back in the corner beside the text */
+  .centerpiece img {
+    display: block !important;
+    width: 350px;
+    max-width: 40%;
+    height: 390px;
+
+    /* Corner placement WITHOUT absolute positioning */
+    align-self: flex-start;
+    margin-top: -185px;
+    margin-left: auto;
+    margin-right: -300px;
+	/* right:-150px; */
+	/* top:-185px; */
+  }
+
+  /* ⭐ Text sits directly next to the image */
+  .side-by-side {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    /* Pulls text closer to H1 and image */
+    justify-content: flex-start;
+
+    gap: 15px; /* closer but not touching */
+    flex-wrap: wrap; /* ⭐ allows wrapping */
+  }
+
   .coming-title {
-	  /* font-family:courier; */
-    font-size: 5rem;
-    color: #C9A23F;
     text-align: center;
-    animation: fadeIn 0.9s ease-out forwards;
+    color: #C9A23F;
+    font-family: Cinzel;
+    font-size: 4.3rem;
+    letter-spacing: 1.3rem;
   }
 
+  /* ⭐ Text closer to H1 */
   .coming-message {
-	  margin-top:85px;
-	  font-family:courier;
-    font-size: 2rem;
+	 text-align:center;
+    font-size: 1.9rem;
     line-height: 1.6;
-    text-align: center;
-    animation: fadeIn 0.8s ease-out forwards;
-  }
-
-  .tagline {
-    font-size: 2rem;
-    margin-top: 300px;
-    color: #C9A23F;
-    text-align: center;
-    animation: fadeIn 1s ease-out forwards;
+    max-width: 400px;
+    font-family: monospace;
+    margin-top: -215px;
+	margin-right:125px;
+	margin-left:auto;
 	
   }
-  /* .centerpiece img{ */
-	  display:block;
-	  margin:auto;
-	  width:20rem;
-	  
 
-
+  footer {
+    margin-top: 225px;
+  }
+}
 
 
 /* ===========================
-   MOBILE — GRADIENT + IMAGES
+   MOBILE — STACKED ORDER + GOLD LOGO
    =========================== */
 
 @media (max-width: 768px) {
 
-  /* Mobile gradient background */
   body {
     background-image: none;
-    background: linear-gradient(
-      to bottom,
-      #0D2A6A,
-      #000000
-    );
-    font-family: cinzel;
+    background: linear-gradient(to bottom, #0D2A6A, #000000);
   }
 
-  /* Prevent content from touching edges */
-  .content {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  /* Centerpiece image — perfect mobile size */
+  /* ⭐ Centerpiece under Coming Soon */
   .centerpiece img {
-    display: block;
-    width: 400px;        /* big but not too big */
+    display: block !important;
+    position: static !important;
+    width: min(400px, 90%);
     height: auto;
-    margin: 30px auto;   /* centered with spacing */
-  }
+    margin: 20px auto;
 
-  /* Coming Soon — large + centered */
-  .coming-title {
-    font-size: 3.5rem;
-    color: #C9A23F;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 20px;
-    animation: fadeIn 0.5s ease-out forwards;
   }
-
-  /* Message text — centered + larger */
+.coming-title{
+	text-align:center;
+	font-size:2.3rem;
+	letter-spacing:1.3rem;
+	color: #C9A23F;
+}
+  /* ⭐ Paragraph under centerpiece */
   .coming-message {
-    font-size: 1.7rem;
+    font-size: clamp(1.2rem, 4vw, 1.7rem);
+    text-align: center;
     line-height: 1.6;
-    text-align: center;
     margin-bottom: 25px;
-    animation: fadeIn 0.7s ease-out forwards;
   }
 
-  /* Bottom section container */
-  .bottom-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
-
-  /* Tagline centered above the logo */
-  .tagline {
-    font-size: 1.3rem;
-    color: #C9A23F;
-    text-align: center;
-    margin-bottom: 12px;
-    animation: fadeIn 0.9s ease-out forwards;
-  }
-
-  /* Bottom logo — visible only on mobile */
+  /* ⭐ Logo above footer */
   .brand-logo {
+    display: block !important;
+    width: min(550px, 90%);
+    height:150px;
+    margin: 20px auto;
+  }
+
+    
+  /* ⭐ Footer last */
+  .site-footer {
+    margin-top: 40px;
+  }
+
+  /* ⭐ Mobile layout stacks naturally */
+  .side-by-side {
     display: block;
-    width: 120px;
-    height: auto;
-    margin: 0 auto 30px auto;
-    animation: fadeIn 1s ease-out forwards;
   }
 }
