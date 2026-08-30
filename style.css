@@ -119,26 +119,6 @@ body {
 
 @media (max-width: 768px) {
 
-  /* Centerpiece mascot image (larger, no glow, no shadow) */
-  .centerpiece img {
-    width: 85rem;        /* larger centerpiece */
-    height: auto;
-	display:block;
-	margin:auto;
-	margin-top: 30px;    /* even spacing above */
-    margin-bottom: 30px; /* even spacing below */
-	border-radius: 12px; /* soft edges only */
-  }
-
-  /* Smaller logo with even spacing */
-  .center-logo img {
-    width: 30rem;        /* smaller logo */
-    height: auto;
-	margin-top: .5px;
-    margin-bottom: 15px;
-	/* border-radius: 10px; /* clean, simple */ */
-  }
-
   /* Dramatic gradient background */
   body {
     background-image: none;
@@ -149,27 +129,55 @@ body {
     );
   }
 
-  /* Larger, attention-grabbing "Coming Soon" */
+  /* Large centerpiece image */
+  .centerpiece img {
+    width: 280px;        /* larger centerpiece */
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px; /* clean edges, no glow */
+  }
+
+  /* Large Coming Soon text */
   .coming-title {
-    font-size: 4rem;           /* bigger than before */
-    letter-spacing: 0.5rem;      /* subtle emphasis */
+    font-size: 4rem;     /* big and attention-grabbing */
+    color: #C9A23F;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
     animation: fadeIn 0.5s ease-out forwards;
-	/* text-align:center; */
   }
 
   /* Slightly larger message text */
   .coming-message {
-    font-size: 1.9rem;          /* slightly bigger */
-    line-height: 2;
-    /* animation: fadeIn 0.7s ease-out forwards; */
-	/* text-align:center; */
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    animation: fadeIn 0.7s ease-out forwards;
   }
 
-  /* Slightly larger tagline + closer spacing */
+  /* Bottom section container */
+  .bottom-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  /* Tagline centered above the logo */
   .tagline {
-    font-size: 1.25rem;          /* slightly bigger */
-    margin-top: 12px;
-    animation: fadeIn 1s ease-out forwards;
-	text-align:center;
+    font-size: 1.3rem;   /* slightly larger */
+    color: #C9A23F;
+    text-align: center;
+    margin-bottom: 12px;
+    animation: fadeIn 0.9s ease-out forwards;
+  }
+
+  /* Smaller bottom logo */
+  .bottom-logo {
+    width: 130px;        /* smaller + more visible */
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    /* animation: fadeIn 1s ease-out forwards; */
   }
 }
