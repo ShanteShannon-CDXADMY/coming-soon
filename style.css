@@ -123,6 +123,7 @@ body {
     text-align: left;
     margin-bottom: 25px;
     animation: fadeIn 0.7s ease-out forwards;
+	text-align:center;
   }
 
   /* Bottom section container */
