@@ -123,22 +123,20 @@ body {
   .centerpiece img {
     width: 260px;        /* larger centerpiece */
     height: auto;
-
-    margin-top: 30px;    /* even spacing above */
+	display:block;
+	margin:auto;
+	margin-top: 30px;    /* even spacing above */
     margin-bottom: 30px; /* even spacing below */
-
-    border-radius: 12px; /* soft edges only */
+	border-radius: 12px; /* soft edges only */
   }
 
   /* Smaller logo with even spacing */
   .center-logo img {
-    width: 140px;        /* smaller logo */
+    width: 200px;        /* smaller logo */
     height: auto;
-
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-    border-radius: 10px; /* clean, simple */
+	margin-top: .5px;
+    margin-bottom: 15px;
+	/* border-radius: 10px; /* clean, simple */ */
   }
 
   /* Dramatic gradient background */
@@ -153,22 +151,25 @@ body {
 
   /* Larger, attention-grabbing "Coming Soon" */
   .coming-title {
-    font-size: 3.6rem;           /* bigger than before */
-    letter-spacing: 0.05em;      /* subtle emphasis */
+    font-size: 4rem;           /* bigger than before */
+    letter-spacing: 0.5rem;      /* subtle emphasis */
     animation: fadeIn 0.5s ease-out forwards;
+	text-align:center;
   }
 
   /* Slightly larger message text */
   .coming-message {
-    font-size: 1.55rem;          /* slightly bigger */
-    line-height: 1.6;
-    animation: fadeIn 0.7s ease-out forwards;
+    font-size: 1.9rem;          /* slightly bigger */
+    line-height: 2;
+    /* animation: fadeIn 0.7s ease-out forwards; */
+	text-align:center;
   }
 
   /* Slightly larger tagline + closer spacing */
   .tagline {
     font-size: 1.25rem;          /* slightly bigger */
     margin-top: 12px;
-    animation: fadeIn 0.9s ease-out forwards;
+    animation: fadeIn 1s ease-out forwards;
+	text-align:center;
   }
 }
